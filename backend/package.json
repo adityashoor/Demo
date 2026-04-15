@@ -1,0 +1,48 @@
+{
+  "name": "labour-platform-backend",
+  "version": "1.0.0",
+  "description": "Labour Supply & Management Platform - Backend API",
+  "scripts": {
+    "build": "nest build",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:prod": "node dist/main",
+    "migration:run": "typeorm migration:run -d src/database/data-source.ts",
+    "migration:revert": "typeorm migration:revert -d src/database/data-source.ts",
+    "seed": "ts-node src/database/seeds/index.ts"
+  },
+  "dependencies": {
+    "@nestjs/common": "^10.0.0",
+    "@nestjs/core": "^10.0.0",
+    "@nestjs/platform-express": "^10.0.0",
+    "@nestjs/typeorm": "^10.0.0",
+    "@nestjs/jwt": "^10.0.0",
+    "@nestjs/passport": "^10.0.0",
+    "@nestjs/config": "^3.0.0",
+    "@nestjs/swagger": "^7.0.0",
+    "@nestjs/schedule": "^4.0.0",
+    "@nestjs/throttler": "^5.0.0",
+    "typeorm": "^0.3.17",
+    "pg": "^8.11.0",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1",
+    "passport-local": "^1.0.0",
+    "bcrypt": "^5.1.1",
+    "class-validator": "^0.14.0",
+    "class-transformer": "^0.5.1",
+    "axios": "^1.6.0",
+    "twilio": "^4.19.0",
+    "date-fns": "^2.30.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.1"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^10.0.0",
+    "@nestjs/testing": "^10.0.0",
+    "@types/bcrypt": "^5.0.2",
+    "@types/node": "^20.0.0",
+    "@types/passport-jwt": "^3.0.13",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.1"
+  }
+}
